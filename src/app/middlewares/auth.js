@@ -1,16 +1,29 @@
-export default (req, res, next) => {
+import jwt from 'jsonwebtoken';
+import { promisify } from 'util';
+
+import authConfig from '../../config/auth'
+
+export default async (req, res, next) => {
     const authHeaders = req.headers.authorization
 
     if (!authHeaders){
-        return res.status(401).json({ message: 'Para acessar este serviço é necessário estar logado'})
+        return res.status(401).json({ 
+            message: 'Para acessar este serviço é necessário estar logado'
+        })
     }
-
-    const [bearer, token] = authHeaders.slice(' ')
-
-    console.log('barer', bearer, 'token', token)
-
     
+    const [, token] = authHeaders.split(' ');
 
-    next()
+    try {
 
+        const decoded = await promisify(jwt.verify)(token, authConfig.secret);
+        req.userId = decoded.id;
+        next();
+        
+    } catch (error) {
+        return res.status(401).json({
+            message: 'Token inválido'
+        })
+        
+    }
 }
