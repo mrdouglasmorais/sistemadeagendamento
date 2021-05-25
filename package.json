@@ -8,8 +8,10 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "date-fns": "^2.21.3",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.11",
     "multer": "^1.4.2",
     "pg": "^8.6.0",
     "pg-hstore": "^2.3.3",
