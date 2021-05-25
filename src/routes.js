@@ -38,6 +38,9 @@ routes.get('/schedule', ScheduleController.index)
 // Listagem de notificações
 routes.get('/notifications', NotificationsController.index)
 
+// Marcar como lida
+routes.put('/notifications/:id', NotificationsController.update)
+
 // Upload de arquivos
 routes.post('/files', upload.single('file'), FileController.store);
 
