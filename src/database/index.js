@@ -23,7 +23,7 @@ class Database {
 
   mongo() {
     this.mongoConnection = mongoose.connect(
-      'mongodb+srv://sistemadeagendamento:sistemadeagendamento@cluster0.hcwxr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+      'mongodb+srv://afya:afya@cluster0.flfpc.mongodb.net/afya?retryWrites=true&w=majority',
       { useNewUrlParser: true, useUnifiedTopology: true }
     )
   }

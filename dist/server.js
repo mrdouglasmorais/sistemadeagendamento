@@ -1,3 +1,7 @@
-"use strict"; function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _app = require('./app'); var _app2 = _interopRequireDefault(_app);
+"use strict"; function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _cors = require('cors'); var _cors2 = _interopRequireDefault(_cors);
+var _app = require('./app'); var _app2 = _interopRequireDefault(_app);
 
-_app2.default.listen(3333);
+const PORT = process.env.PORT || 3000;
+_app2.default.use(_cors2.default)
+_app2.default.listen(PORT);
