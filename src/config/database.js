@@ -1,10 +1,10 @@
 // const cCert = require('../../ca-certificate.cer');
 
 module.exports = {
-  host: 'db-postgresql-nyc1-66881-do-user-6675228-0.b.db.ondigitalocean.com',
-  username: 'doadmin',
-  password: 'jec6v2uhrsdwjpeo',
-  database: 'defaultdb',
+  host: 'app-acee9c45-4763-4e06-a998-beee59596269-do-user-6675228-0.b.db.ondigitalocean.com',
+  username: 'db',
+  password: 'hssu5zvmnx6jro7k',
+  database: 'db',
   port: 25060,
   dialect: 'postgres',
   dialectOptions: {
