@@ -16,6 +16,11 @@ var _auth = require('./app/middlewares/auth'); var _auth2 = _interopRequireDefau
 const routes = new (0, _express.Router)();
 const upload = _multer2.default.call(void 0, _multer4.default)
 
+
+routes.get('/', (req, res) => {
+  res.json({message: 'Okay'})
+})
+
 routes.post('/users', _UserController2.default.store)
 routes.post('/session', _SessionController2.default.store)
 
