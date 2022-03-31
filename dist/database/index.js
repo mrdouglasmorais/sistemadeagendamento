@@ -23,7 +23,7 @@ class Database {
 
   mongo() {
     this.mongoConnection = _mongoose2.default.connect(
-      'mongodb+srv://afya:afya@cluster0.flfpc.mongodb.net/afya?retryWrites=true&w=majority',
+      process.env.MONGO_DB_CONNECT,
       { useNewUrlParser: true, useUnifiedTopology: true }
     )
   }
