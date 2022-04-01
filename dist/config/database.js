@@ -4,9 +4,16 @@
   username: 'nvltissw',
   password: 'azpLqK6zm7H3bjN6HGD8YpxIar3T_VT3',
   database: 'nvltissw',
+  logging: false,
   define: {
-    timeStamps: true,
+    timestamps: true,
     underscored: true,
     underscoredAll: true,
-  }
+  },
+  sslmode: "required",
+  dialectOptions: {
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  },
 }
