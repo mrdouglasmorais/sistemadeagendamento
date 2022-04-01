@@ -23,7 +23,7 @@ class Database {
 
   mongo() {
     this.mongoConnection = mongoose.connect(
-      process.env.MONGO_DB_CONNECT,
+      'mongodb+srv://sys_agendamento:ghky5xuJjdKIIgFK@cluster0.flfpc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
       { useNewUrlParser: true, useUnifiedTopology: true }
     )
   }
