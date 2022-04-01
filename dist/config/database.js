@@ -1,9 +1,9 @@
 "use strict";module.exports = {
-  dialect: process.env.DB_DIALECT,
-  host: process.env.DB_HOST,
-  username: process.env.DB_USERNAME,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
+  dialect: 'postgres',
+  host: 'ziggy.db.elephantsql.com',
+  username: 'nvltissw',
+  password: 'azpLqK6zm7H3bjN6HGD8YpxIar3T_VT3',
+  database: 'nvltissw',
   define: {
     timeStamps: true,
     underscored: true,
